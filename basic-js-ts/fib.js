@@ -12,7 +12,11 @@ rl.question("Please enter number : ", (input) => {
     }
     return fib(num - 1) + fib(num - 2);
   };
-  const result = fib(input);
-  console.log(result);
+  if (input > 0) {
+    const result = fib(input);
+    console.log(result);
+  } else {
+    console.error(`Number can't be less than 1`);
+  }
   rl.close();
 });
